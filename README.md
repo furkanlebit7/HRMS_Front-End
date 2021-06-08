@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 ![Screenshot_3](https://user-images.githubusercontent.com/59422278/121246714-1fe48e80-c8aa-11eb-9384-b5bfe7d89229.png)
 
 UML DIAGRAM
 ![uml](https://user-images.githubusercontent.com/59422278/120934600-a1e88200-c707-11eb-8969-775e8f8695a9.png)
+=======
+
+![uml](https://user-images.githubusercontent.com/59422278/120934717-289d5f00-c708-11eb-9fe2-6a40e6bde83e.png)
+
+>>>>>>> 8ec2da67d2416a975ae6291ec631d3c471b38a81
 
 # Getting Started with Create React App
 
