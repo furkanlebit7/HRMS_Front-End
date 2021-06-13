@@ -1,3 +1,7 @@
+:root {
+  --main-color: #7f42ef;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +15,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 .App {
   text-align: center;
 }

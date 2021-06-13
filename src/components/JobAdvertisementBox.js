@@ -6,7 +6,7 @@ class JobAdvertisementBox extends Component {
     const advertisement = this.props.advertisement;
     return (
       <div className="card_body" key={advertisement.id}>
-        <div className="card_company">
+        <div className="card_company d-flex flex-column justify-content-start align-items-center">
           <div className="card_img flex">
             <img src={advertisement.employer.companyLogo} width="70px" />
           </div>
@@ -43,7 +43,7 @@ class JobAdvertisementBox extends Component {
             <span>{advertisement.numberOfPosition}</span>
           </li>
           <li className="card_list_item">
-            <a className="advertisement_card_button">Detaylar</a>
+            <button className="advertisement_card_button">Detaylar</button>
           </li>
         </ul>
       </div>

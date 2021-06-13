@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import { Card, Button } from "react-bootstrap";
 
 class JobAdvertisementFilterBox extends Component {
   render() {
     return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>Filter Box</Card.Title>
-          <Card.Text>Here will be update</Card.Text>
-          <Button variant="primary">Filter</Button>
-        </Card.Body>
-      </Card>
+      <div className="card container w-75">
+        <div className="card-body">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" className="btn btn-primary">
+            Go somewhere
+          </a>
+        </div>
+      </div>
     );
   }
 }

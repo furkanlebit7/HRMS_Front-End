@@ -51,18 +51,21 @@
 .advertisement_card_button {
   transition: 2s;
   width: 200px;
-  height: 30px;
+  height: 40px;
   position: absolute;
-  bottom: -10px;
+  bottom: -20px;
   left: 200px;
   border: none;
   background-color: #a498ec;
-  border-radius: 3px;
+  border-radius: 10px;
   color: white;
-  transition: 1s;
+  transition: 0.7s;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.advertisement_card_button:hover {
+  background-color: blueviolet;
 }
 
 .card_body:hover .advertisement_card_button {

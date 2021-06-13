@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Card, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import JobAdvertisementBox from "../components/JobAdvertisementBox";
 import JobAdvertisementFilterBox from "../components/JobAdvertisementFilterBox";
 import JobAdvertisementService from "../services/jobAdvertisementService";
@@ -10,7 +10,7 @@ export default function JobAdvertisements() {
   useEffect(() => {
     let jobAdvertisementsService = new JobAdvertisementService();
     jobAdvertisementsService
-      .getAdvertisements()
+      .getAll()
       .then((result) => setjobAdvertisements(result.data.data));
   });
 

@@ -1,0 +1,13 @@
+.block-button {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: white;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 4px;
+}
+.block-button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
