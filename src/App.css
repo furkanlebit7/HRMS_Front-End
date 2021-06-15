@@ -1,5 +1,7 @@
 :root {
-  --main-color: #7f42ef;
+  --main-color: #816afe;
+  --second-color: #48d3fe;
+  --gray-color: rgb(235, 235, 235);
 }
 
 * {

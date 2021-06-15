@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Formik } from "formik";
+import { Alert } from "react-bootstrap";
 import "./AdvertisementPstBox.css";
 import CityService from "../services/cityService";
 import JobTitleService from "../services/jobTitlesService";
@@ -8,6 +9,7 @@ import JobAdvertisementService from "../services/jobAdvertisementService";
 export default function AdvertisementPostBox() {
   const [cities, setCities] = useState([]);
   const [jobTitles, setJobTitles] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     let cityService = new CityService();
@@ -15,10 +17,19 @@ export default function AdvertisementPostBox() {
 
     let jobTitleService = new JobTitleService();
     jobTitleService.getAll().then((result) => setJobTitles(result.data.data));
-  }, []);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
+  }, [showAlert]);
+
   let jobAdvertisementService = new JobAdvertisementService();
   return (
-    <div>
+    <div className="advertisementPostBox">
+      <div on class="alert alert-success d-none" role="alert">
+        İş ilanı isteğiniz gönderildi. Tarafımızdan onaylandığında yayına
+        alınacaktır!
+      </div>
       <Formik
         initialValues={{
           createdDate: "",
@@ -67,13 +78,11 @@ export default function AdvertisementPostBox() {
           return errors;
         }}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          setTimeout(() => {
-            values.jobTitleId = parseInt(values.jobTitleId);
-            values.cityId = parseInt(values.cityId);
-            jobAdvertisementService.add(values);
-            resetForm();
-            setSubmitting(false);
-          }, 400);
+          values.jobTitleId = parseInt(values.jobTitleId);
+          values.cityId = parseInt(values.cityId);
+          jobAdvertisementService.add(values).then();
+          resetForm();
+          setSubmitting(false);
         }}
       >
         {({
@@ -87,7 +96,18 @@ export default function AdvertisementPostBox() {
           dirty,
         }) => (
           <form onSubmit={handleSubmit} className=" text-start">
-            <div className="col">
+            {showAlert && (
+              <Alert
+                variant="success"
+                onClose={() => setShowAlert(false)}
+                dismissible
+              >
+                <b>Başarılı!</b> İlanınız tarafımızdan onaylandığında yayına
+                alınacaktır...
+              </Alert>
+            )}
+
+            <div className="form-group">
               <label htmlFor="employerId">
                 EmployerId ------------------- "Login Logout geldiğinde burası
                 kalkacak"
