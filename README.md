@@ -1,3 +1,5 @@
+![hrms](https://user-images.githubusercontent.com/59422278/122618594-37382e80-d097-11eb-96c0-4d9a1cc5ac65.png)
+
 ![ss](https://user-images.githubusercontent.com/59422278/121808845-16b94000-cc63-11eb-8d74-ed8774717a01.png)
 
 ![Screenshot_3](https://user-images.githubusercontent.com/59422278/121246714-1fe48e80-c8aa-11eb-9384-b5bfe7d89229.png)
