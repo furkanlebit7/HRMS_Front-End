@@ -1,0 +1,83 @@
+.main_page_title {
+  font-weight: bold;
+}
+
+.main_page_jobs {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.main_page_job {
+  border: 1px solid var(--gray-color);
+  width: 100%;
+  height: 120px;
+  border-radius: 3px;
+  transition: 0.3s;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.main_page_job:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main_page_job_img {
+  border: 1px solid var(--gray-color);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_page_job_img img {
+  width: 100%;
+  height: 100%;
+}
+.main_page_job_body {
+  line-height: 0.4;
+  font-family: "Poppins", sans-serif;
+  flex-grow: 2;
+  margin: 3px 15px;
+}
+.main_page_job_body_company {
+  font-weight: 300;
+}
+.main_page_job_body_job {
+  font-weight: 600;
+}
+.main_page_job_body_city {
+  font-size: 0.7rem;
+}
+.main_page_job_date {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main_page_job_date i {
+  font-size: 1.3rem;
+}
+.main_page_job_date i:hover {
+  color: var(--main-color);
+}
+
+.main_page_job_date_date {
+  font-size: 0.7rem;
+}
+
+.see_all_link {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.see_all_link:hover {
+  color: var(--second-color);
+}
+.fa-chevron-right {
+  margin-left: 5px;
+}

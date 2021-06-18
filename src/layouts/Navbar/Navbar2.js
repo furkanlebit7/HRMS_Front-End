@@ -14,9 +14,9 @@ export default function Navbar2() {
               İşveren İçin
               <ul className="dropdown_menu">
                 <li>İşveren Hesabını Onayla</li>
-                <div class="dropdown-divider"></div>
+                <div className="dropdown-divider"></div>
                 <li>İş İlanı Paylaş</li>
-                <div class="dropdown-divider"></div>
+                <div className="dropdown-divider"></div>
                 <li>İşveren Markası</li>
                 <li>İşveren Blogu</li>
               </ul>
@@ -24,21 +24,21 @@ export default function Navbar2() {
             <li className="dropdown_button">İş İlanı Paylaş</li>
           </ul>
         </div>
-        <ul className="d-flex align-items-center justify-content-start navbar2_down container">
-          <li className="d-flex align-items-center">
+        <ul className=" navbar2_down container">
+          <li className="d-flex align-items-center navbar2_down_item">
             <i class="fas fa-business-time"></i>
             <h6 className="mt-2">Jobs</h6>
           </li>
-          <li className="d-flex align-items-center">
-            <i class="fas fa-building"></i>
+          <li className="d-flex align-items-center navbar2_down_item">
+            <i className="fas fa-building"></i>
             <h6 className="mt-2">Companies</h6>
           </li>
-          <li className="d-flex align-items-center">
-            <i class="fas fa-money-bill-wave"></i>
+          <li className="d-flex align-items-center navbar2_down_item">
+            <i className="fas fa-money-bill-wave"></i>
             <h6 className="mt-2">Salaries</h6>
           </li>
-          <li className="d-flex align-items-center">
-            <i class="far fa-comments"></i>
+          <li className="d-flex align-items-center navbar2_down_item">
+            <i className="far fa-comments"></i>
             <h6 className="mt-2">Intervievs</h6>
           </li>
         </ul>

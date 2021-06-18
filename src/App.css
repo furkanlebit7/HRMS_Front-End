@@ -30,3 +30,18 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.p-std {
+  padding: 1.25rem !important;
+}
+.border-std {
+  border: 1px solid var(--gray-color) !important;
+  border-radius: 3px;
+}
+
+.font-1 {
+  font-family: "Poppins", sans-serif;
+}
+.font-2 {
+  font-family: "Lato", sans-serif;
+}

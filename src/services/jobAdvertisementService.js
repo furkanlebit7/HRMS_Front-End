@@ -26,4 +26,10 @@ export default class JobAdvertisementService {
       advertisement
     );
   }
+
+  getFourAdvertisement() {
+    return axios.get(
+      "http://localhost:8080/api/jobAdvertisements/getFourAdvertisement"
+    );
+  }
 }

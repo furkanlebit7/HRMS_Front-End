@@ -93,7 +93,6 @@ export default function AdvertisementPostBox() {
           handleBlur,
           handleSubmit,
           isSubmitting,
-          dirty,
         }) => (
           <form onSubmit={handleSubmit} className=" text-start">
             {showAlert && (

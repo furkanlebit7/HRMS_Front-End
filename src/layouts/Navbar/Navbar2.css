@@ -40,7 +40,7 @@
   border: 1px solid var(--gray-color);
   text-align: left;
   padding: 0px;
-  width: 180%;
+  width: 200%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   top: 36px;
   display: none;
@@ -58,11 +58,18 @@
 
 .navbar2_down {
   margin: 10px 0px 0px 0px;
+  display: grid;
+  grid-template: auto/auto auto auto auto 1fr;
+  grid-gap: 48px;
+}
+.navbar2_down_item {
+  position: relative;
 }
 
 .navbar2_down li {
   cursor: pointer;
-  margin-right: 60px;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 .navbar2_down li h6 {
   font-family: "Poppins", sans-serif;
@@ -73,4 +80,7 @@
   font-size: 1.6rem;
   margin-right: 10px;
   color: var(--main-color);
+}
+.navbar2_down_item:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

@@ -1,0 +1,6 @@
+.user_profile_box:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.user_profile_box {
+  transition: 0.3s;
+}

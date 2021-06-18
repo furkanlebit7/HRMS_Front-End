@@ -1,0 +1,30 @@
+.create_job_alert {
+  width: 100%;
+  height: 170px;
+  display: flex;
+}
+.create_job_alert:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.create_job_alert_top i {
+  color: var(--main-color);
+}
+.get_alert_button {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 15%;
+  margin: 0px 2%;
+  height: 40px;
+  align-self: flex-end;
+}
+.get_alert_button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.create_job_alert_bottom form {
+  width: 100%;
+  align-items: flex-end;
+}
