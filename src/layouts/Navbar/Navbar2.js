@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar2.css";
 
 export default function Navbar2() {
@@ -25,22 +26,30 @@ export default function Navbar2() {
           </ul>
         </div>
         <ul className=" navbar2_down container">
-          <li className="d-flex align-items-center navbar2_down_item">
-            <i class="fas fa-business-time"></i>
-            <h6 className="mt-2">Jobs</h6>
-          </li>
-          <li className="d-flex align-items-center navbar2_down_item">
-            <i className="fas fa-building"></i>
-            <h6 className="mt-2">Companies</h6>
-          </li>
-          <li className="d-flex align-items-center navbar2_down_item">
-            <i className="fas fa-money-bill-wave"></i>
-            <h6 className="mt-2">Salaries</h6>
-          </li>
-          <li className="d-flex align-items-center navbar2_down_item">
-            <i className="far fa-comments"></i>
-            <h6 className="mt-2">Intervievs</h6>
-          </li>
+          <Link className="navbar2_item" to="/jobs">
+            <li className="d-flex align-items-center navbar2_down_item ">
+              <i class="fas fa-business-time"></i>
+              <h6 className="mt-2">Jobs</h6>
+            </li>
+          </Link>
+          <Link className="navbar2_item" to="/companies">
+            <li className="d-flex align-items-center navbar2_down_item">
+              <i className="fas fa-building"></i>
+              <h6 className="mt-2">Companies</h6>
+            </li>
+          </Link>
+          <Link className="navbar2_item" to="/salaries">
+            <li className="d-flex align-items-center navbar2_down_item">
+              <i className="fas fa-money-bill-wave"></i>
+              <h6 className="mt-2">Salaries</h6>
+            </li>
+          </Link>
+          <Link className="navbar2_item" to="/intervievs">
+            <li className="d-flex align-items-center navbar2_down_item">
+              <i className="far fa-comments"></i>
+              <h6 className="mt-2">Intervievs</h6>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>

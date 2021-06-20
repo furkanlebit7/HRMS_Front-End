@@ -1,0 +1,48 @@
+.main_page_salaries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.main_page_salaries_box {
+  width: 100%;
+  height: 156px;
+}
+.main_page_salaries_box:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main_page_salaries_box div p {
+  margin: 0;
+}
+
+.main_page_salaries_box div p:nth-child(1) {
+  font-weight: 500;
+}
+.main_page_salaries_box div p:nth-child(2) {
+  font-size: 0.7rem;
+}
+.main_page_salaries_box div p:nth-child(3) {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.main_page_salaries_box div p:nth-child(4) {
+  font-size: 0.7rem;
+}
+.main_page_salaries_box div p:nth-child(5) {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.salaries_chart_part {
+  width: 12px;
+  border-radius: 3px;
+  background-color: var(--gray-color);
+}
+.salaries_chart {
+  height: 90%;
+}
+
+.salaries_chart_salaries span {
+  font-size: 0.7rem;
+}

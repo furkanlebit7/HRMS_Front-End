@@ -1,12 +1,15 @@
 import React from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navibar() {
   return (
     <>
       <nav class="navbar navbar-light ">
         <div className="container d-flex align-items-center justify-content-between">
-          <img src="logo.svg" width="130px" />
+          <Link to="/">
+            <img src="logo.svg" width="130px" />
+          </Link>
           <form class="form-group d-flex flex-row ">
             <input
               type="email"

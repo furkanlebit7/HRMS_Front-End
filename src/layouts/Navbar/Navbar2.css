@@ -70,6 +70,10 @@
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 3px;
+  color: black;
+}
+.navbar2_item:hover {
+  text-decoration: none;
 }
 .navbar2_down li h6 {
   font-family: "Poppins", sans-serif;
