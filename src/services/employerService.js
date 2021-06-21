@@ -4,4 +4,7 @@ export default class EmployerService {
   getAll() {
     return axios.get("http://localhost:8080/api/employers/getall");
   }
+  getEmployerThree() {
+    return axios.get("http://localhost:8080/api/employers/getThree");
+  }
 }

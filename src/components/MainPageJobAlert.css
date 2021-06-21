@@ -2,6 +2,7 @@
   width: 100%;
   height: 170px;
   display: flex;
+  transition: 0.3s;
 }
 .create_job_alert:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

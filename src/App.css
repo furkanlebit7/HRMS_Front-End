@@ -17,6 +17,9 @@ ul {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 
 .App {
   text-align: center;

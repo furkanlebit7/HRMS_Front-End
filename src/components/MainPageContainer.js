@@ -3,6 +3,7 @@ import "./MainPageContainer.css";
 import MainPageJobAlert from "./MainPageJobAlert";
 import MainPageJobs from "./MainPageJobs.js";
 import MainPageExploreSalaries from "./MainPageExploreSalaries.js";
+import MainPageCompanies from "./MainPageCompanies.js";
 
 export default function MainPageContainer() {
   return (
@@ -10,6 +11,7 @@ export default function MainPageContainer() {
       <MainPageJobs />
       <MainPageJobAlert />
       <MainPageExploreSalaries />
+      <MainPageCompanies />
     </div>
   );
 }

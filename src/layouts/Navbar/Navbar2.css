@@ -61,6 +61,7 @@
   display: grid;
   grid-template: auto/auto auto auto auto 1fr;
   grid-gap: 48px;
+  padding: 0px;
 }
 .navbar2_down_item {
   position: relative;

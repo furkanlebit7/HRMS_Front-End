@@ -6,7 +6,7 @@ export default function Navibar() {
   return (
     <>
       <nav class="navbar navbar-light ">
-        <div className="container d-flex align-items-center justify-content-between">
+        <div className="container-xxl d-flex align-items-center justify-content-between">
           <Link to="/">
             <img src="logo.svg" width="130px" />
           </Link>

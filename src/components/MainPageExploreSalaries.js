@@ -4,7 +4,7 @@ import "./MainPageExploreSalaries.css";
 export default function MainPageExploreSalaries() {
   return (
     <div className="main_page_salaries_container mt-5 mb-5">
-      <h3 className="main_page_title">Explore Salaries</h3>
+      <h3 className="main_page_title">Maaşları Keşfet</h3>
       <div className="main_page_salaries mt-2">
         <div className="main_page_salaries_box border-std p-std font-1 row">
           <div className="d-flex flex-column col-6 align-items-start justify-content-center">
@@ -60,7 +60,7 @@ export default function MainPageExploreSalaries() {
                 style={{ height: "10%" }}
               ></div>
             </div>
-            <div className="salaries_chart_salaries d-flex justify-content-between">
+            <div className="salaries_chart_salaries d-flex justify-content-between font-2 ">
               <span>₺23K</span>
               <span>₺104K</span>
             </div>
