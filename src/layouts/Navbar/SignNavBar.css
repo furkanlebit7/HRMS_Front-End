@@ -1,0 +1,10 @@
+.signIn_button {
+  background-color: white !important;
+  border-color: var(--main-color) !important;
+  color: var(--main-color) !important;
+}
+.signIn_button:hover {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  color: white !important;
+}

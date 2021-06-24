@@ -11,7 +11,7 @@ export default function MainPageCompanies() {
       .then((result) => setCompanies(result.data.data));
   }, []);
   return (
-    <div className="main_page_companies_container mt-5 mb-5">
+    <div className="main_page_companies_container mt-5">
       <h3 className="main_page_title">Şirketleri Keşfet</h3>
       <div className="row main_page_comiany_cards">
         {companies.map((company) => (

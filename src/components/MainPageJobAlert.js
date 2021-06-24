@@ -3,7 +3,6 @@ import "./MainPageJobAlert.css";
 import { Formik } from "formik";
 import CityService from "../services/cityService";
 import JobTitleService from "../services/jobTitlesService";
-import { Alert } from "react-bootstrap";
 
 export default function MainPageJobAlert() {
   const [cities, setCities] = useState([]);

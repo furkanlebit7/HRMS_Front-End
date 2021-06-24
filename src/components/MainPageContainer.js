@@ -4,6 +4,7 @@ import MainPageJobAlert from "./MainPageJobAlert";
 import MainPageJobs from "./MainPageJobs.js";
 import MainPageExploreSalaries from "./MainPageExploreSalaries.js";
 import MainPageCompanies from "./MainPageCompanies.js";
+import MainPageArticles from "./MainPageArticles";
 
 export default function MainPageContainer() {
   return (
@@ -12,6 +13,7 @@ export default function MainPageContainer() {
       <MainPageJobAlert />
       <MainPageExploreSalaries />
       <MainPageCompanies />
+      <MainPageArticles />
     </div>
   );
 }

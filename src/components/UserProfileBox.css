@@ -3,4 +3,9 @@
 }
 .user_profile_box {
   transition: 0.3s;
+  width: 100%;
+  height: 300px;
+  border: 1px solid var(--gray-color);
+  position: sticky;
+  top: 50px;
 }

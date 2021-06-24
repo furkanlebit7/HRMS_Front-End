@@ -10,7 +10,7 @@ export default function MainPageExploreSalaries() {
           <div className="d-flex flex-column col-6 align-items-start justify-content-center">
             <p>Data Scientist</p>
             <p>İstanbul</p>
-            <p>$116,058</p>
+            <p>$96,058</p>
             <p>Yıllık Ortalama Maaş</p>
             <p>27K Salaries</p>
           </div>
@@ -70,7 +70,7 @@ export default function MainPageExploreSalaries() {
           <div className="d-flex flex-column col-6 align-items-start justify-content-center">
             <p>Data Scientist</p>
             <p>İstanbul</p>
-            <p>$116,058</p>
+            <p>$96,058</p>
             <p>Yıllık Ortalama Maaş</p>
             <p>27K Salaries</p>
           </div>
@@ -130,7 +130,7 @@ export default function MainPageExploreSalaries() {
           <div className="d-flex flex-column col-6 align-items-start justify-content-center">
             <p>Data Scientist</p>
             <p>İstanbul</p>
-            <p>$116,058</p>
+            <p>$96,058</p>
             <p>Yıllık Ortalama Maaş</p>
             <p>27K Salaries</p>
           </div>
@@ -190,7 +190,7 @@ export default function MainPageExploreSalaries() {
           <div className="d-flex flex-column col-6 align-items-start justify-content-center">
             <p>Data Scientist</p>
             <p>İstanbul</p>
-            <p>$116,058</p>
+            <p>$96,058</p>
             <p>Yıllık Ortalama Maaş</p>
             <p>27K Salaries</p>
           </div>

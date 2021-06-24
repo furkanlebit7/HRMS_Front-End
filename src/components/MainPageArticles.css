@@ -1,0 +1,35 @@
+.main_page_articles_cards {
+  grid-gap: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+.main_page_articles_card {
+  height: 380px;
+  transition: 0.3s;
+}
+.main_page_articles_card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main_page_article_image {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 110px;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.main_page_article_header {
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.main_page_article_date {
+  padding: 0;
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--main-color);
+}
