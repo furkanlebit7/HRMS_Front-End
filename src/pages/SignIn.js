@@ -29,7 +29,7 @@ export default function SignUp() {
     } else {
       setError(false);
       dispatch(logIn(user));
-      history.push("./");
+      history.push("/");
     }
   };
 

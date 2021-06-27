@@ -52,3 +52,15 @@ p {
 .form-control {
   font-size: 1rem !important;
 }
+
+.bg-main {
+  background-color: var(--main-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+.text-white {
+  color: white !important;
+}
+
+.text-main {
+  color: var(--main-color) !important;
+}

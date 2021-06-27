@@ -1,14 +1,21 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logOut } from "../../store/actions/authActions";
 
 export default function Navibar() {
+  const dispatch = useDispatch();
+  const logOutHandler = () => {
+    dispatch(logOut());
+  };
+
   return (
     <>
       <nav className="navbar navbar-light ">
         <div className="container-xxl d-flex align-items-center justify-content-between">
           <Link to="/">
-            <img src="logo.svg" width="130px" />
+            <img src="logo.png" width="130px" />
           </Link>
           <form className="form-group d-flex flex-row ">
             <input
@@ -31,7 +38,7 @@ export default function Navibar() {
           </form>
           <div className="dropdown">
             <button
-              className="btn dropdown-toggle"
+              className="btn "
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
@@ -41,26 +48,30 @@ export default function Navibar() {
               <i class="far fa-user"></i>
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="#">
-                Profiles
-              </a>
-              <a className="dropdown-item" href="#">
-                Resumes
-              </a>
-              <a className="dropdown-item" href="#">
-                Job Preferences
-              </a>
+              <Link className="dropdown-item" to="/userprofile/profile">
+                Profil
+              </Link>
+              <Link className="dropdown-item" to="/userprofile/userresume">
+                Özgeçmiş
+              </Link>
+              <Link
+                className="dropdown-item"
+                to="/userprofile/userjobpreferences"
+              >
+                İş Tercihi
+              </Link>
               <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#">
-                Account Settings
-              </a>
+              <Link className="dropdown-item" to="userprofile">
+                Yardım Merkezi
+              </Link>
               <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#">
-                Help Center
-              </a>
-              <a className="dropdown-item" href="#">
-                Sign Out
-              </a>
+              <Link
+                onClick={logOutHandler}
+                className="dropdown-item"
+                to="userprofile"
+              >
+                Çıkış Yap
+              </Link>
             </div>
           </div>
         </div>

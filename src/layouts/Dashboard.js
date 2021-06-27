@@ -8,6 +8,7 @@ import Navibar from "./Navbar/Navibar";
 import Navbar2 from "./Navbar/Navbar2";
 import Footer from "./Footer.js";
 import MainPage from "../pages/MainPage";
+import UserProfilePage from "../pages/UserProfilePage";
 
 export default function Routers() {
   return (
@@ -21,6 +22,7 @@ export default function Routers() {
           <Route path="/companies" component={CompaniesPage} />
           <Route path="/salaries" component={SalariesPage} />
           <Route path="/intervievs" component={IntervievsPage} />
+          <Route path="/userprofile" component={UserProfilePage} />
         </div>
       </div>
 

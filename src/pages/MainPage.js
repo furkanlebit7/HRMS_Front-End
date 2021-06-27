@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import UserProfileBox from "../components/UserProfileBox";
 import MainPageContainer from "../components/MainPageContainer";

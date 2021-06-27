@@ -8,9 +8,8 @@ export function logIn(user) {
   };
 }
 
-export function logOut(user) {
+export function logOut() {
   return {
     type: LOG_OUT,
-    payload: user,
   };
 }
