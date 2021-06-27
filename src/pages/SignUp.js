@@ -41,7 +41,7 @@ export default function SignUp() {
                 <ErrorMessage
                   name="email"
                   render={(error) => (
-                    <small class="form-text signUp_box_title_error">
+                    <small className="form-text signUp_box_title_error">
                       *{error}
                     </small>
                   )}
@@ -57,7 +57,7 @@ export default function SignUp() {
                 <ErrorMessage
                   name="password"
                   render={(error) => (
-                    <small class="form-text signUp_box_title_error">
+                    <small className="form-text signUp_box_title_error">
                       {error}
                     </small>
                   )}
@@ -77,19 +77,19 @@ export default function SignUp() {
         <h3>HRMS Sizin İçin Nasıl Çalışır</h3>
         <div className="how_hrms_works_tags d-flex align-items-center justify-content-between">
           <div className="how_hrms_works_icons">
-            <i class="fas fa-search fa-3x mb-2"></i>
+            <i className="fas fa-search fa-3x mb-2"></i>
             <h5 className="font-1">Doğru İşi Bul</h5>
           </div>
           <div className="how_hrms_works_icons">
-            <i class="far fa-comment fa-3x mb-2"></i>
+            <i className="far fa-comment fa-3x mb-2"></i>
             <h5 className="font-1">Doğru Şirketi Bul</h5>
           </div>
           <div className="how_hrms_works_icons">
-            <i class="fas fa-hand-holding-usd fa-3x mb-2"></i>
+            <i className="fas fa-hand-holding-usd fa-3x mb-2"></i>
             <h5 className="font-1">Maaşları Karşılaştır</h5>
           </div>
           <div className="how_hrms_works_icons">
-            <i class="fas fa-briefcase fa-3x mb-2"></i>
+            <i className="fas fa-briefcase fa-3x mb-2"></i>
             <h5 className="font-1">İş Başvurusu Yap</h5>
           </div>
         </div>

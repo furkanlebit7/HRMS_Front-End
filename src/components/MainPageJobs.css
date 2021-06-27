@@ -35,7 +35,7 @@
   height: 100%;
 }
 .main_page_job_body {
-  line-height: 0.4;
+  line-height: 1.4;
   font-family: "Poppins", sans-serif;
   flex-grow: 2;
   margin: 3px 15px;

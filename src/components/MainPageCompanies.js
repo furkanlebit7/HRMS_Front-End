@@ -62,7 +62,7 @@ export default function MainPageCompanies() {
         ))}
       </div>
       <div href="#" className="see_all_link">
-        Tüm Şirketler<i class="fas fa-chevron-right"></i>
+        Tüm Şirketler<i className="fas fa-chevron-right"></i>
       </div>
     </div>
   );

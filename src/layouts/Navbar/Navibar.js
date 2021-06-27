@@ -5,33 +5,33 @@ import { Link } from "react-router-dom";
 export default function Navibar() {
   return (
     <>
-      <nav class="navbar navbar-light ">
+      <nav className="navbar navbar-light ">
         <div className="container-xxl d-flex align-items-center justify-content-between">
           <Link to="/">
             <img src="logo.svg" width="130px" />
           </Link>
-          <form class="form-group d-flex flex-row ">
+          <form className="form-group d-flex flex-row ">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Search for job titles, companies, or keywords"
             />
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Location"
             />
             <button className="btn navbtn">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </button>
           </form>
-          <div class="dropdown">
+          <div className="dropdown">
             <button
-              class="btn dropdown-toggle"
+              className="btn dropdown-toggle"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
@@ -40,25 +40,25 @@ export default function Navibar() {
             >
               <i class="far fa-user"></i>
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a className="dropdown-item" href="#">
                 Profiles
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Resumes
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Job Preferences
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <div className="dropdown-divider"></div>
+              <a className="dropdown-item" href="#">
                 Account Settings
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <div className="dropdown-divider"></div>
+              <a className="dropdown-item" href="#">
                 Help Center
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Sign Out
               </a>
             </div>

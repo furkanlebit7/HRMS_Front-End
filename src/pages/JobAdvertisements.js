@@ -1,32 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
-import JobAdvertisementBox from "../components/JobAdvertisementBox";
-import JobAdvertisementFilterBox from "../components/JobAdvertisementFilterBox";
+import JobAdvertisementFilter from "../components/JobAdvertisementFilter";
+import JobAdvertisementList from "../components/JobAdvertisementList";
+import JobAdvertisementDetail from "../components/JobAdvertisementDetail";
+import "./JobAdvertisements.css";
 import JobAdvertisementService from "../services/jobAdvertisementService";
 
 export default function JobAdvertisements() {
-  const [jobAdvertisements, setjobAdvertisements] = useState([]);
-
+  const [advertisements, setAdvertisements] = useState([]);
+  const [advertisement, setAdvertisement] = useState({});
   useEffect(() => {
-    let jobAdvertisementsService = new JobAdvertisementService();
-    jobAdvertisementsService
+    let jobAdvertisementService = new JobAdvertisementService();
+    jobAdvertisementService
       .getAll()
-      .then((result) => setjobAdvertisements(result.data.data));
-  });
+      .then((result) => setAdvertisements(result.data.data));
+    jobAdvertisementService
+      .getAll()
+      .then((result) => setAdvertisement(result.data.data[0]));
+
+    jobAdvertisementService
+      .getAllPageable(1, 10)
+      .then((result) => console.log(result.data.data));
+  }, []);
+
+  const advertisementHandler = (ad) => {
+    setAdvertisement(ad);
+  };
 
   return (
-    <Row className="mt-5">
-      <Col xs={6} md={4}>
-        <JobAdvertisementFilterBox />
-      </Col>
-      <Col xs={12} md={8}>
-        {jobAdvertisements.map((advertisement) => (
-          <JobAdvertisementBox
-            advertisement={advertisement}
-            key={advertisement.id}
-          />
-        ))}
-      </Col>
-    </Row>
+    <div className="d-flex flex-column afaf">
+      <div>
+        <JobAdvertisementFilter />
+      </div>
+      <div className="d-flex">
+        <JobAdvertisementList
+          advertisements={advertisements}
+          setAdvertisement={advertisementHandler}
+        />
+        <JobAdvertisementDetail advertisement={advertisement} />
+      </div>
+    </div>
   );
 }

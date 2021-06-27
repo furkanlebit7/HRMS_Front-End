@@ -24,14 +24,14 @@ export default function MainPageJobAlert() {
     <div className="create_job_alert_container mt-5">
       {showAlert && (
         <div
-          class="alert alert-success alert-dismissible fade show"
+          className="alert alert-success alert-dismissible fade show"
           role="alert"
         >
           Belirlediğiniz kriterlere uygun iş ilanı yayınlandığında size
           bildireceğiz
           <button
             type="button"
-            class="close"
+            className="close"
             data-dismiss="alert"
             aria-label="Close"
             onClick={() => {
@@ -45,7 +45,7 @@ export default function MainPageJobAlert() {
 
       <div className="create_job_alert border-std p-std mt-3 flex-column justify-content-between">
         <div className="create_job_alert_top d-flex font-2">
-          <i class="far fa-bell fa-2x mr-3"></i>
+          <i className="far fa-bell fa-2x mr-3"></i>
           <p className="">
             <b>Kaçırmayın! </b>Tercihlerinize uygun işleri yayınlandıkları anda
             bildirim alın.

@@ -14,13 +14,16 @@ export default function Routers() {
     <div>
       <Navibar />
       <Navbar2 />
-      <div className="container-xxl">
-        <Route exact path="/" component={MainPage} />
-        <Route path="/jobs" component={JobAdvertisement} />
-        <Route path="/companies" component={CompaniesPage} />
-        <Route path="/salaries" component={SalariesPage} />
-        <Route path="/intervievs" component={IntervievsPage} />
+      <div>
+        <div className="container-xxl">
+          <Route exact path="/" component={MainPage} />
+          <Route path="/jobs" component={JobAdvertisement} />
+          <Route path="/companies" component={CompaniesPage} />
+          <Route path="/salaries" component={SalariesPage} />
+          <Route path="/intervievs" component={IntervievsPage} />
+        </div>
       </div>
+
       <Footer />
     </div>
   );

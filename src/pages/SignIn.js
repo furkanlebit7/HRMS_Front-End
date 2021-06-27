@@ -50,7 +50,7 @@ export default function SignUp() {
           <h3 className="signUp_box_title mb-5">Hayatınıza Uygun İş Bulun</h3>
           {error && (
             <div
-              class="alert alert-danger alert-dismissible fade show"
+              className="alert alert-danger alert-dismissible fade show"
               role="alert"
             >
               Hatalı kullanıcı adı veya parola
@@ -85,7 +85,7 @@ export default function SignUp() {
                 <ErrorMessage
                   name="email"
                   render={(error) => (
-                    <small class="form-text signUp_box_title_error">
+                    <small className="form-text signUp_box_title_error">
                       * {error} *
                     </small>
                   )}
@@ -101,7 +101,7 @@ export default function SignUp() {
                 <ErrorMessage
                   name="password"
                   render={(error) => (
-                    <small class="form-text signUp_box_title_error">
+                    <small className="form-text signUp_box_title_error">
                       * {error} *
                     </small>
                   )}

@@ -32,4 +32,13 @@ export default class JobAdvertisementService {
       "http://localhost:8080/api/jobAdvertisements/getFourAdvertisement"
     );
   }
+
+  getAllPageable(page, size) {
+    return axios.get(
+      "http://localhost:8080/api/jobAdvertisements/getAllPageable?pageNo=" +
+        page +
+        "&pageSize=" +
+        size
+    );
+  }
 }

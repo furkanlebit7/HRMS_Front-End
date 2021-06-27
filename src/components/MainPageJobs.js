@@ -45,7 +45,7 @@ export default function MainPageJobs() {
         ))}
       </div>
       <div href="#" className="see_all_link">
-        Tüm İş ilanları<i class="fas fa-chevron-right"></i>
+        Tüm İş ilanları<i className="fas fa-chevron-right"></i>
       </div>
     </div>
   );
