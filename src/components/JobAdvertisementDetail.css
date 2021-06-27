@@ -64,6 +64,9 @@ p {
 .job_advertisement_detail_body_detail {
   border-bottom: 1px solid var(--gray-color);
 }
+.job_advertisement_detail_body_detail li {
+  margin-bottom: 10px;
+}
 .job_advertisement_detail_body_website button {
   background-color: white;
   color: var(--main-color);

@@ -52,25 +52,25 @@ export default function JobAdvertisementDetail({ advertisement }) {
           <div className="p-std job_advertisement_detail_body_description">
             {advertisement.description}
           </div>
-          <ul className=" p-std job_advertisement_detail_body_detail d-flex flex-column align-items-start">
+          <ul className=" p-std job_advertisement_detail_body_detail d-flex flex-column align-items-start font-1 my-5">
             <li>
-              <b>İş Türü : </b>
+              <b className="mr-4">İş Türü : </b>
               {advertisement.jobFeature}
             </li>
             <li>
-              <b>Yayınlanma Tarihi : </b>
+              <b className="mr-4">Yayınlanma Tarihi : </b>
               {advertisement.createdDate}
             </li>
             <li>
-              <b>Son Başvuru Tarihi : </b>
+              <b className="mr-4">Son Başvuru Tarihi : </b>
               {advertisement.lastDate}
             </li>
             <li>
-              <b>İş Tipi : </b>
+              <b className="mr-4">İş Tipi : </b>
               {advertisement.jobType}
             </li>
             <li>
-              <b>Açık Pozisyon Adedi : </b>
+              <b className="mr-4">Açık Pozisyon Adedi : </b>
               {advertisement.numberOfPosition}
             </li>
             <li>

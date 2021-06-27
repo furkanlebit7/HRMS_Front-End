@@ -15,7 +15,7 @@ export default function JobAdvertisementFilter() {
   }, []);
 
   return (
-    <div className="job_advertisement_filter mt-5">
+    <div className="job_advertisement_filter mt-1">
       <Formik
         initialValues={{
           jobType: "",
