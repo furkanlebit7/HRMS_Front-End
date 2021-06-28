@@ -1,0 +1,9 @@
+.profile_collapse_button {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+.profile_collapse_button:hover {
+  background-color: var(--main-color);
+  color: white;
+}

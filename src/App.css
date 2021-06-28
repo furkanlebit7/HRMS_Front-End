@@ -64,3 +64,13 @@ p {
 .text-main {
   color: var(--main-color) !important;
 }
+.text-second {
+  color: var(--second-color) !important;
+}
+.text-gray {
+  color: var(--gray-color) !important;
+}
+
+.text-align-left {
+  text-align: left;
+}
