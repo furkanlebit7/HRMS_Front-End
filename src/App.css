@@ -74,3 +74,17 @@ p {
 .text-align-left {
   text-align: left;
 }
+
+.font-gray {
+  color: gray;
+}
+.btn-main {
+  border: 1px solid var(--main-color) !important;
+  color: var(--main-color) !important;
+  background-color: white !important;
+}
+.btn-main:hover {
+  border: 1px solid var(--main-color) !important;
+  color: white !important;
+  background-color: var(--main-color) !important;
+}

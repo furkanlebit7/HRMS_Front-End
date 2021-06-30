@@ -9,4 +9,5 @@ export default class ResumeSchoolService {
       "http://localhost:8080/api/resumeSchool/findByResumeId?id=" + id
     );
   }
+  add(school) {}
 }

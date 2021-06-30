@@ -9,4 +9,7 @@ export default class ResumeService {
       "http://localhost:8080/api/resume/findByCandidateId?id=" + id
     );
   }
+  updateResume(resume) {
+    return axios.post("http://localhost:8080/api/resume/updateResume", resume);
+  }
 }

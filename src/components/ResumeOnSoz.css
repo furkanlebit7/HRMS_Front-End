@@ -1,0 +1,17 @@
+.resume_onsoz_header {
+  margin: 0;
+  padding: 0;
+}
+.resume_onsoz_header_button {
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--main-color);
+}
+.resume_onsoz_header_button i {
+  font-size: 1.4rem;
+}

@@ -15,7 +15,7 @@ export default function Navibar() {
       <nav className="navbar navbar-light ">
         <div className="container-xxl d-flex align-items-center justify-content-between">
           <Link to="/">
-            <img src="logo.png" width="130px" />
+            <img src="../../logo.svg" width="130px" />
           </Link>
           <form className="form-group d-flex flex-row ">
             <input

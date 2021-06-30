@@ -1,0 +1,13 @@
+.resume_item_body {
+  flex-grow: 1;
+}
+
+h5 {
+  margin: 0;
+}
+.resume_item_body h5 {
+  font-weight: 500;
+}
+.resume_school_ekle_form {
+  width: 100%;
+}

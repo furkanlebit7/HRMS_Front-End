@@ -39,7 +39,7 @@ export default function UserProfilePage() {
                 to="/userprofile/userresume"
                 class="list-group-item list-group-item-action"
               >
-                Özgeçmişler
+                Özgeçmiş
               </Link>
               <Link
                 to="/userprofile/userjobpreferences"
