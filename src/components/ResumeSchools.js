@@ -50,9 +50,6 @@ export default function ResumeSchools({ resume }) {
                 <button className="resume_onsoz_header_button">
                   <i class="far fa-trash-alt"></i>
                 </button>
-                <button className="resume_onsoz_header_button">
-                  <i class="fas fa-edit"></i>
-                </button>
               </div>
             </div>
           ))}
