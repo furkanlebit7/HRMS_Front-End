@@ -9,5 +9,12 @@ export default class ResumeSchoolService {
       "http://localhost:8080/api/resumeSchool/findByResumeId?id=" + id
     );
   }
-  add(school) {}
+  add(school) {
+    return axios.post("http://localhost:8080/api/resumeSchool/add", school);
+  }
+  removeById(id) {
+    return axios.get(
+      "http://localhost:8080/api/resumeSchool/removeById?id=" + id
+    );
+  }
 }

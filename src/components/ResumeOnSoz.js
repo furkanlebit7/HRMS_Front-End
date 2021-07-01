@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./ResumeOnSoz.css";
 import { Formik } from "formik";
-import { ref } from "yup";
 
 export default function ResumeOnSoz({ updateResume, resume }) {
   const [openInput, setOpenInput] = useState(false);
-
   const openInputHandler = () => {
     setOpenInput(true);
   };

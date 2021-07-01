@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
-import "./ResumeSchools.css";
 import { Formik } from "formik";
-import ResumeSchoolsService from "../services/resumeSchoolService";
+import ResumeExperienceService from "../services/resumeExperienceService";
+import JobTitlesService from "../services/jobTitlesService";
 
-export default function ResumeSchools({ resume, triggerResume }) {
+export default function ResumeExperiences({ resume, triggerResume }) {
   const [showForm, setShowForm] = useState(false);
-  const [schools, setSchools] = useState([]);
+  const [jobTitles, setJobTitles] = useState([]);
+  const [experiences, setExperiences] = useState([]);
 
-  let resumeSchoolsService = new ResumeSchoolsService();
+  let jobTitlesService = new JobTitlesService();
+  let resumeExperienceService = new ResumeExperienceService();
 
   useEffect(() => {
-    resumeSchoolsService
-      .getSchoolByResumeId(resume.id)
-      .then((result) => setSchools(result.data.data));
+    jobTitlesService.getAll().then((result) => setJobTitles(result.data.data));
+  }, []);
+
+  useEffect(() => {
+    resumeExperienceService
+      .getExperiencesByResumeId(resume.id)
+      .then((result) => setExperiences(result.data.data));
   }, [resume]);
 
   const OpenFormHandler = () => {
@@ -21,15 +27,15 @@ export default function ResumeSchools({ resume, triggerResume }) {
   const CloseFormHandler = () => {
     setShowForm(false);
   };
-  const schoolRemoveHandler = (id) => {
-    resumeSchoolsService.removeById(id);
+  const experienceRemoveHandler = (id) => {
+    resumeExperienceService.removeById(id);
   };
   return (
     <div>
       {resume.id && (
         <div class="card mt-5">
           <div class="card-header font-1 d-flex align-items-center justify-content-between">
-            <h3 className="resume_onsoz_header text-main">Okul</h3>
+            <h3 className="resume_onsoz_header text-main">Deneyim</h3>
             <button
               onClick={OpenFormHandler}
               className="resume_onsoz_header_button"
@@ -37,67 +43,64 @@ export default function ResumeSchools({ resume, triggerResume }) {
               <i class="fas fa-plus-circle"></i>
             </button>
           </div>
-          {schools.map((school) => (
-            <div
-              key={school.id}
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div>
-                <i class="fas fa-graduation-cap fa-3x text-main"></i>
+          {experiences &&
+            experiences.map((experience) => (
+              <div
+                key={experience.id}
+                class="card-body d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <i class="fas fa-building fa-3x text-main"></i>
+                </div>
+                <div className="resume_item_body ml-5 ">
+                  <h5 className="font-1">{experience.workplaceName}</h5>
+                  <span>{experience.jobTitle.title}</span>
+                  <p className="font-gray">
+                    <span>{experience.startedDate.substring(0, 4)} - </span>
+                    {experience.going ? (
+                      <span>Devam Ediyor</span>
+                    ) : (
+                      <span>{experience.endDate.substring(0, 4)}</span>
+                    )}
+                  </p>
+                </div>
+                <div className="resume_item_body_actions">
+                  <button
+                    onClick={function () {
+                      experienceRemoveHandler(experience.id);
+                      triggerResume();
+                    }}
+                    className="resume_onsoz_header_button"
+                  >
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </div>
               </div>
-              <div className="resume_item_body ml-5 ">
-                <h5 className="font-1">{school.schoolName}</h5>
-                <span>{school.degree} Derecesi, </span>
-                <span> {school.department}</span>
-                <p className="font-gray">
-                  <span>{school.startedDate.substring(0, 4)} - </span>
-                  {school.going ? (
-                    <span>Devam Ediyor</span>
-                  ) : (
-                    <span>{school.endDate.substring(0, 4)}</span>
-                  )}
-                </p>
-              </div>
-              <div className="resume_item_body_actions">
-                <button
-                  onClick={function () {
-                    triggerResume();
-                    schoolRemoveHandler(school.id);
-                  }}
-                  className="resume_onsoz_header_button"
-                >
-                  <i class="far fa-trash-alt"></i>
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
           {showForm && (
             <div>
               <hr />
               <div class="card-body d-flex justify-content-between align-items-center ">
                 <Formik
                   initialValues={{
-                    schoolName: "",
-                    department: "",
+                    workplaceName: "",
+                    jobTitleId: "",
                     startedDate: "",
                     endDate: "",
-                    degree: "",
                   }}
                   validate={(values) => {
                     const errors = {};
                     let sD = new Date(values.startedDate);
                     let eD = new Date(values.endDate);
                     let today = new Date();
-                    if (!values.schoolName) {
-                      errors.schoolName = "Okul Adı alanı Zorunludur";
-                    } else if (!values.department) {
-                      errors.department = "Bölüm Adı Alanı Zorunludur";
+                    if (!values.workplaceName) {
+                      errors.workplaceName = "İş Yeri Adı alanı Zorunludur";
                     } else if (!values.startedDate) {
                       errors.startedDate = "Başlangıç Tarihi Alanı Zorunludur";
+                    } else if (!values.jobTitleId) {
+                      errors.jobTitleId = "İş Pozisyonu Alanı Zorunludur";
                     } else if (!values.endDate) {
                       errors.endDate = "Bitiş Tarihi Alanı Zorunludur";
-                    } else if (!values.degree) {
-                      errors.degree = "Lütfen Derece Seçiniz";
                     } else if (today.getTime() <= sD.getTime()) {
                       errors.startedDate =
                         "Başlangıç Tarihi İleri Bir Tarih Olamaz";
@@ -114,9 +117,10 @@ export default function ResumeSchools({ resume, triggerResume }) {
                     return errors;
                   }}
                   onSubmit={(values) => {
-                    let resumeSchool = values;
-                    resumeSchool.resumeId = resume.id;
-                    resumeSchoolsService.add(resumeSchool);
+                    let resumeExperience = values;
+                    resumeExperience.jobTitleId = parseInt(values.jobTitleId);
+                    resumeExperience.resumeId = resume.id;
+                    resumeExperienceService.add(resumeExperience);
                     setShowForm(false);
                     triggerResume();
                   }}
@@ -134,35 +138,43 @@ export default function ResumeSchools({ resume, triggerResume }) {
                       className=" text-start resume_school_ekle_form"
                     >
                       <div className="form-group mt-4">
-                        <label htmlFor="schoolName">Okul Adı</label>
+                        <label htmlFor="workplaceName">İş Yeri Adı</label>
                         <input
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          value={values.schoolName}
+                          value={values.workplaceName}
                           className="form-control"
-                          id="schoolName"
+                          id="workplaceName"
                           type="text"
                         />
                         <small id="emailHelp" className="form-text text-danger">
-                          {errors.schoolName &&
-                            touched.schoolName &&
-                            errors.schoolName}
+                          {errors.workplaceName &&
+                            touched.workplaceName &&
+                            errors.workplaceName}
                         </small>
                       </div>
+
                       <div className="form-group mt-4">
-                        <label htmlFor="department">Bölüm Adı</label>
-                        <input
+                        <label htmlFor="jobTitleId">İş Pozisyonu</label>
+                        <select
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          value={values.department}
+                          value={values.jobTitleId}
                           className="form-control"
-                          id="department"
+                          id="jobTitleId"
                           type="text"
-                        />
+                        >
+                          <option value="">İş Pozisyonu Seçin</option>
+                          {jobTitles.map((jobTitle) => (
+                            <option key={jobTitle.id} value={jobTitle.id}>
+                              {jobTitle.title}
+                            </option>
+                          ))}
+                        </select>
                         <small id="emailHelp" className="form-text text-danger">
-                          {errors.department &&
-                            touched.department &&
-                            errors.department}
+                          {errors.jobTitleId &&
+                            touched.jobTitleId &&
+                            errors.jobTitleId}
                         </small>
                       </div>
                       <div className="row">
@@ -202,30 +214,6 @@ export default function ResumeSchools({ resume, triggerResume }) {
                             {errors.endDate &&
                               touched.endDate &&
                               errors.endDate}
-                          </small>
-                        </div>
-                        <div className="form-group mt-4 col">
-                          <label htmlFor="degree">Derece</label>
-                          <select
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.degree}
-                            className="form-control"
-                            id="degree"
-                            type="text"
-                          >
-                            <option value="">Derece Seçin</option>
-                            <option value="Lise">Lise</option>
-                            <option value="Ön Lisans">Ön Lisans</option>
-                            <option value="Lisans">Lisans</option>
-                            <option value="Yüksek Lisans">Yüksek Lisans</option>
-                            <option value="Doktora">Doktora</option>
-                          </select>
-                          <small
-                            id="emailHelp"
-                            className="form-text text-danger"
-                          >
-                            {errors.degree && touched.degree && errors.degree}
                           </small>
                         </div>
                       </div>
